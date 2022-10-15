@@ -5,3 +5,16 @@ const app = express();
 const HOST = '0.0.0.0';
 
 const PORT = 80;
+
+app.get('/', (req,res)=>{
+
+    res.send('Hello World');
+
+    app.listen(PORT, HOST);
+
+    console.log(`Server is currently running on port ${PORT}`)
+
+
+
+
+})
