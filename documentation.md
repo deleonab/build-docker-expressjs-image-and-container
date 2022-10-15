@@ -1,16 +1,16 @@
 
-create Dockerfile
+#### create Dockerfile
 
 ```
 $ touch Dockerfile
 ```
-create package.json file
+#### create package.json file
 
 ```
 
 $ touch package.json
 ```
- package.json content
+ #### package.json content
  ```
 {
     "dependencies": {
@@ -20,9 +20,9 @@ $ touch package.json
 }
  ```
 
- Create server.js
- ````
+ #### Create server.js
 
+ ```
 const express = require('express');
 
 const app = express();
@@ -39,12 +39,10 @@ app.get('/', (req,res)=>{
 
     console.log(`Server is currently running on port ${PORT}`);
 
-
-
-
-})
+});
  ```
-Dockerfile contents
+#### Dockerfile contents
+
 ```
 FROM node
 WORKDIR /app
@@ -53,7 +51,8 @@ RUN npm install
 CMD ["node","server.js"]
 ```
 
-docker build -t dele/express
+### docker build -t dele/express
+
 ```
 $ docker build . -t dele/express
 Sending build context to Docker daemon  100.9kB
